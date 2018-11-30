@@ -36,8 +36,20 @@
 			<div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="product.html">Giày Nam</a></li>
-					<li><a href="home.php">Giày Nữ</a></li>		
+					<li class="active"><a href="product.html">Giày Nam <i></i></a>
+							<ul>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+							</ul>
+					</li>
+					<li><a href="home.php">Giày Nữ <i></i></a>
+						<ul>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+							</ul>
+					</li>		
 					<li><a href="gioithieu.php">Giới thiệu</a>	
 					</li>
 					<li><a href="product.html">Báo giá <i> </i></a>
@@ -55,7 +67,7 @@
 			</div><!-- end h_menu4 -->
 			<div class="col-md-2 col-md-offset-3 h_menu4">
 				<ul class="nav">
-					<li><a href="checkout.php" title=""><span class="glyphicon glyphicon-shopping-cart"></span > Giỏ hàng <span id="sumGH">0</span></a></li>
+					<li><a href="/shoeShop/views/checkout.php" title=""><span class="glyphicon glyphicon-shopping-cart"></span > Giỏ hàng <span id="sumGH">0</span></a></li>
 				</ul>
 			</div>
 			<div class="clearfix"> </div>

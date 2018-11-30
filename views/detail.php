@@ -27,9 +27,9 @@
 </head>
 <body>
 	<?php
-	include_once '../controller/controller_shop.php';
-	$controller = new controller_class();
-	$result=$controller->detail();
+	include_once '../controller/c_detail.php';
+	$detail = new controller_class_detail();
+	$result=$detail->detail();
 	?>
 	<div class="container-fluid">
 		<div class="row">
