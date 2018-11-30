@@ -4,7 +4,7 @@
 <!-- end header -->
 
 <?php
-	header('Location:home.php');
+
 	if(isset($_SESSION['name'])){
 		header('location:home.php');
 	}
