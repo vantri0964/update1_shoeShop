@@ -1,45 +1,13 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home</title>
-
-	<?php include('head.php'); ?>
-	
-	<link rel="stylesheet" href="../css/flexslider.css" type="text/css" media="screen" />
-	
-	
-	<style type="text/css" media="screen">
-	#title-product{
-		border-bottom: 5px double #d2232a;
-	}
-	#content-8{
-		border-right: 2px solid  #d2232a;
-	}
-	.jumbotron1{
-		background:white;
-		width: 400px;
-	}
-	.jumbotron img{
-		padding: 0px;
-	}
-	.jumbotron #jum1{
-		padding:3px 0px;
-	}
-</style>
-</head>
-<body> 
-	<?php
+<!--header-->
+	<?php include('header.php'); ?>
+<!--end header-->
+<?php
 	include('../controller/c_loadAndPaging.php');
 	$loadAndPaging=new controller_class_load();
 	$result=$loadAndPaging->product();
-	?>
-	<div class="container-fluid">
-		<div class="row">
+?>
 			
-			<!--header-->
-			<?php include('header.php') ?>
-			<!--end header-->
+
 
 			<!-- start content -->
 			<div class="banner">
@@ -239,15 +207,10 @@
 					</div>	
 					<div class="clearfix"> </div>
 				</div>
-				<!--end contetn-->
+				<!--end content-->
 
 
 			</div>	
-			<!--footer-->
-			<?php include('footer.php') ?>
-			<!-- end footer -->
-
-		</div>
-	</div>
-</body>
-</html>
+<!--footer-->
+	<?php include('footer.php') ?>
+<!-- end footer -->

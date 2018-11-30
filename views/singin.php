@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Singin</title>
 
-	<?php include('head.php');?>
-
-</head>
-<body>
-	<div class="container-fluid">
-		<div class="row">
-			<!--start header -->
-			<?php include('header.php') ?>
-			<!-- end header -->
+<!--start header -->
+	<?php include('header.php'); ?>
+<!-- end header -->
 
 			<!--start content -->
 			<div class="container">
@@ -54,11 +44,7 @@
 			</div>
 			<!--end content-->
 
-			<!-- start footer-->
-			<?php include('footer.php') ?>
-			<!--end footer-->
+<!-- start footer-->
+	<?php include('footer.php'); ?>
+<!--end footer-->
 
-		</div>
-	</div>
-</body>
-</html>

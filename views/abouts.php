@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
-	<title>Introduce</title>
-	<?php include('head.php');?>
-</head>
-<body>
-	<div class="container-fluid">
-		<div class="row">
-			<!-- start header -->
-				<?php include('header.php');?>
-			<!-- end header -->
+<!-- start header -->
+	<?php include('header.php');?>
+<!-- end header -->
 
-			<!-- start content checkout -->
-				
-
-			<div class="row">
-			<div class="contrainer">
-				<div class="col-md-8 col-md-offset-4">
-					<h3>Giới thiệu</h3>
-					<div id="showText">
+<!-- start content checkout -->
+	<div class="row">
+		<div class="contrainer">
+			<div class="col-md-8 col-md-offset-4">
+				<h3>Giới thiệu</h3>
+				<div id="showText">
 						<p>
 							Thời Trang Stopy là website bán lẻ thời trang giày online uy tín, chất lượng tốt: giày speaker,giày tây, giày cao gót, giày lười (dành cho nam và nữ)..., mẫu mã cập nhật thường xuyên, và tiêu chí hàng đầu về chất lượng sản phẩm.
 							<br>&nbsp;
@@ -73,7 +61,3 @@
 			<!-- start footer -->
 				<?php include('footer.php');?>
 			<!-- end footer -->
-		</div>
-	</div>
-</body>
-</html>

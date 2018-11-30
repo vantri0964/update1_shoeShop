@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Register</title>
+<!--start header -->
+	<?php include('header.php'); ?>
+<!-- end header -->
 
-	<?php include('head.php');?>
-
-</head>
-<body>
-	<div class="container-fluid">
-		<div class="row">
-
-			<!--start header -->
-			<?php include('header.php') ?>
-			<!-- end header -->
-
-			<!-- start content -->
+		<!-- start content -->
 			<div class="container">
 				<div class="register">
 					<h2>REGISTER</h2>		
@@ -50,13 +38,8 @@
 					</div>		
 				</div>
 			</div>
-			<!-- end content -->
+		<!-- end content -->
 
-			<!--start footer-->
-			<?php include('footer.php') ?>
-			<!--end footer-->
-
-		</div>	
-	</div>
-</body>
-</html>
+<!--start footer-->
+	<?php include('footer.php') ?>
+<!--end footer-->
