@@ -6,7 +6,7 @@ class controller_class_slider{
 	public $total_page;
 	public function slider()
 	{
-	    	$loadAndPaging = new M_LoadAndPaging(); //gọi hàm model
+	    	$loadAndPaging = new M_LoadAndPaging(); //gọi hàm model .....
 	    	$numberRecord=new M_NumberRecord();
 	    	$this->current_page=isset($_GET['page'])? $_GET['page']:1; // kiểm tra số trang trong đường link
 	    	$limit=4; // số record hiển thị mỗi trang là 4
