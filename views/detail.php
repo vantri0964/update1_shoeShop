@@ -1,43 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>More detail</title>
+	<!--header-->
+		<?php include('header.php') ?>
+	<!--end header-->
+	
 
-	<?php include('head.php');?>
-
-	<link rel="stylesheet" href="../css/etalage.css">
-	<script src="../js/jquery.etalage.min.js"></script>
-	<script>
-		jQuery(document).ready(function($){
-
-			$('#etalage').etalage({
-				thumb_image_width: 300,
-				thumb_image_height: 400,
-				source_image_width: 900,
-				source_image_height: 1200,
-				show_hint: true,
-				click_callback: function(image_anchor, instance_id){
-					alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-				}
-			});
-
-		});
-	</script>
-
-</head>
-<body>
-	<?php
+<?php
 	include_once '../controller/c_detail.php';
 	$detail = new controller_class_detail();
 	$result=$detail->detail();
-	?>
-	<div class="container-fluid">
-		<div class="row">
-
-			<!--header-->
-			<?php include('header.php') ?>
-			<!--end header-->
-			
+?>
+		
 			<!-- start content -->
 			<div class="container single">
 				<?php
@@ -114,18 +85,7 @@
 				</div>
 				<!-- end content -->
 
-				<!--footer-->
-				<?php include('footer.php') ?>
-				<!--end footer-->
-				<script>
-					$(document).ready(function(){
-						$('#addgiohang').click(function() {
-							$('#sumGH').text($('#sumGH').text()*1+1);
-						});
-
-					});
-				</script>
-			</div>
-		</div>
-	</body>
-	</html>
+<!--footer-->
+	<?php include('footer.php') ?>
+<!--end footer-->
+				
