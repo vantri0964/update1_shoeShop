@@ -31,12 +31,8 @@
 <body> 
 	<?php
 	include('../controller/c_loadAndPaging.php');
-	include('../controller/c_sliderRight.php');
 	$loadAndPaging=new controller_class_load();
 	$result=$loadAndPaging->product();
-	$sliderright=new controller_class_slider();
-	$resultSlider=$sliderright->slider();
-
 	?>
 	<div class="container-fluid">
 		<div class="row">
@@ -50,7 +46,7 @@
 				
 				<div class="banner-matter">
 
-					<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="1900">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -61,25 +57,25 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner">
 							<div class="item active">
-								<img src="../images/banner.jpg" alt="Shoe New">
-								<div class="carousel-caption ">
-									<h3>Shoe New</h3>
+								<img src="../images/banner.jpg" alt="Chania">
+								<div class="carousel-caption">
+									<h3>Los Angeles</h3>
 									<p>LA is always so much fun!</p>
 								</div>
 							</div>
 
 							<div class="item">
-								<img src="../images/nen.jpg" alt="Beach">
+								<img src="../images/banner.jpg" alt="Chicago">
 								<div class="carousel-caption">
-									<h3>Beach</h3>
+									<h3>Chicago</h3>
 									<p>Thank you, Chicago!</p>
 								</div>
 							</div>
 
 							<div class="item">
-								<img src="../images/mountain.jpg" alt="Mountain">
+								<img src="../images/banner.jpg" alt="New York">
 								<div class="carousel-caption">
-									<h3>Mountain</h3>
+									<h3>New York</h3>
 									<p>We love the Big Apple!</p>
 								</div>
 							</div>
@@ -172,25 +168,18 @@
 									<h3 class="m_2" >Special Offers</h3>
 									<section class="slider">
 										<div class="flexslider">
-
 											<ul class="slides">
-												<?php
-												foreach ($resultSlider as $rowSlider) {
-												 	
-												?>
 												<li>
 													<div class="tittle">
-														<img <?php echo "src=../images/".$rowSlider['img'] ?> class="img-responsive" alt="" height="150px"  />
-														<h6><?php echo $rowSlider['name'] ?></h6>
-														<p><?php echo $rowSlider['cost'] ?><sup>đ</sup></p>
-														
-														<a class="show1" <?php echo 'href=../views/detail.php?id='.$rowSlider['id'] ?> >SHOW ME MORE</a>
+														<img src="../images/si1.jpg" class="img-responsive" alt="" height="150px"  />
+														<h6>Item Title Here</h6>
+														<p>Lorem ipsum dolor sit amet,</p>
+														<p>Lorem ipsum dolor sit amet,</p>
+														<p>Lorem ipsum dolor sit amet,</p>
+														<a class="show1" href="#">SHOW ME MORE</a>
 													</div>
 												</li>
-												<?php
-											}
-											?>
-												<!-- <li>
+												<li>
 													<div class="tittle">
 														<img src="../images/si2.jpg" class="img-responsive" alt=""/>
 														<h6>Item Title Here</h6>
@@ -219,7 +208,7 @@
 														<p>Lorem ipsum dolor sit amet,</p>
 														<a class="show1" href="#">SHOW ME MORE</a>
 													</div>
-												</li> -->
+												</li>
 											</ul>
 										</div>
 									</section>
