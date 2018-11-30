@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 	width:85%;
 	background:#2f2f2f;
 }
-.header-in {
+.header-ins{
 	float: left;
 	width: 90%;
 	text-align:right;
@@ -929,7 +929,7 @@ a.cart{
   background: #d2232a;
   margin: 1.5em 0 0;
   font-size: 1em;
-  display: block;
+  display: inline;
   line-height: 1.6em;
   width: 32%;
   text-align: center;

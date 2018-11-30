@@ -26,11 +26,14 @@
 	.jumbotron #jum1{
 		padding:3px 0px;
 	}
-
 </style>
 </head>
 <body> 
-	
+	<?php
+	include('../controller/controller_shop.php');
+	$controller=new controller_class();
+	$result=$controller->product();
+	?>
 	<div class="container-fluid">
 		<div class="row">
 			
@@ -107,19 +110,27 @@
 					<div class="product-top">
 						<!-- start-product -->
 						<div class="col-md-8" id="content-8">
-							<div class="col-md-6 grid-product-in">	
-								<div class=" product-grid">	
-									<a href="detail.php"><img class="img-responsive " src="../images/pr.png" alt=""></a>		
-									<div class="shoe-in">
-										<h6><a href="detail.php">Lorem Ipsum is simply dummy </a></h6>
-										<label>$67.99</label>
-										<a href="single.html" class="store btn btn-danger"><span class="glyphicon glyphicon-tasks"></span> MORE DETAILS</a>
-									</div>
+							<!-- vòng for hiển thị data -->
+							<?php
+							foreach ($result as $row) {
 
-									<b class="plus-on">+</b>
-								</div>	
-							</div>
-							<div class="col-md-6 grid-product-in">	
+								?>
+								<div class="col-md-6 grid-product-in">	
+									<div class=" product-grid">	
+										<a <?php echo "href=detail.php?id=".$row['id'] ?> ><img class="img-responsive " <?php echo "src=../images/".$row['img']?>  alt=""></a>		
+										<div class="shoe-in">
+											<h6><a <?php echo "href=detail.php?id=".$row['id'] ?> ><?php echo $row['name'] ?> </a></h6>
+											<label><?php echo $row['cost'] ?><sup>đ</sup></label>
+											<a <?php echo "href=detail.php?id=".$row['id'] ?>  class="store btn btn-danger"><span class="glyphicon glyphicon-tasks"></span> MORE DETAILS</a>
+										</div>
+
+										<b class="plus-on">+</b>
+									</div>	
+								</div>
+								<?php
+							}
+							?>
+						<!-- 	<div class="col-md-6 grid-product-in">	
 								<div class=" product-grid">	
 									<a href="detail.php"><img class="../img-responsive " src="../images/pr1.png" alt=""></a>
 									<div class="shoe-in">
@@ -145,7 +156,7 @@
 							</div>
 							<div class="col-md-6 grid-product-in">	
 								<div class=" product-grid">	
-									<a href="single.html"><img class="img-responsive " src="../images/pr4.png" alt=""></a>
+									<a href="single.html"><img class="img-responsive" src="../images/img_4.jpg" alt=""></a>
 									<div class="shoe-in">
 										<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
 										<label>$67.99</label>
@@ -154,7 +165,35 @@
 
 									<b class="plus-on">+</b>
 								</div>
+							</div> -->
+							<!-- start botton phan trang -->
+							<div class="col-md-12">
+								<div class="col-md-9 col-md-offset-3">
+									<ul class="pagination" >							
+
+								<?php
+								$current_page=$controller-> current_page;
+								$total_page=$controller-> total_page;
+								
+								if($current_page > 1 && $total_page > 1)
+									echo '<li><a href="/shoeShop/views/home.php?page='.($current_page-1).'.">&laquo;</a></li>';
+								for( $i=1; $i<= $total_page;$i++){
+									if($i== $current_page){
+										echo '<li><a style="background-color:red;" href="/shoeShop/views/home.php?page='.$i.'">'.$i.'</a></li>';
+									}else{
+										echo '<li><a href="/shoeShop/views/home.php?page='.$i.'">'.$i.'</a></li>';
+									}
+								}
+								if($current_page < $total_page && $total_page >1){
+									echo '<li><a href="/shoeShop/views/home.php?page='.($current_page+1).'">&raquo;</a></li>';
+								}
+								?>
+							</ul>
+								</div>
+								
 							</div>
+							<!-- end botton phan trang  -->
+
 						</div>
 						<!-- end product -->
 						<div class="col-md-3 col-md-offset-1">

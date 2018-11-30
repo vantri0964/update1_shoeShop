@@ -26,6 +26,11 @@
 
 </head>
 <body>
+	<?php
+	include_once '../controller/controller_shop.php';
+	$controller = new controller_class();
+	$result=$controller->detail();
+	?>
 	<div class="container-fluid">
 		<div class="row">
 
@@ -35,74 +40,91 @@
 			
 			<!-- start content -->
 			<div class="container single">
-				<div class="col-md-12 top-in-single">
-					<div class="col-md-5 single-top">	
-						<ul id="etalage">
-							<li>
-								<a href="">
-									<img class="etalage_source_image img-responsive" src="../images/s2.jpg" alt="" >
-								</a>
-							</li>
-						</ul>
+				<?php
+				foreach ($result as $row) {
 
-					</div>	
-					<div class="col-md-7 single-top-in">
-						<div class="single-para">
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-							<div class="star">
-								<ul>
-									<li><i> </i></li>
-									<li><i> </i></li>
-									<li><i> </i></li>
-									<li><i> </i></li>
-									<li><i> </i></li>
-								</ul>
-								<div class="review">
-									<a href="#"> 3 reviews </a>/
-									<a href="#">  Write a review</a>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
+					?>
+					<div class="col-md-12 top-in-single">
+						<div class="col-md-5 single-top">	
+							<ul id="etalage">
+								<li>
+									<a href="">
+										<img class="etalage_source_image img-responsive" <?php echo "src=../images/".$row['img'] ?> alt="" >
+									</a>
+								</li>
+							</ul>
 
-							<label  class="add-to">$32.8</label>
-
-							<div class="available">
-								<h6>Available Options :</h6>
-								<ul>
-
-									<li>Size:<select>
-										<option>Large</option>
-										<option>Medium</option>
-										<option>small</option>
-										<option>Large</option>
-										<option>small</option>
-									</select></li>
-									<li>Cost:
-										<select>
-											<option>U.S.Dollar</option>
-											<option>Euro</option>
-										</select></li>
+						</div>	
+						<div class="col-md-7 single-top-in">
+							<div class="single-para">
+								<h4><?php echo $row['name'] ?></h4>
+								<p><?php echo $row['describes'] ?></p>
+								<div class="star">
+									<ul>
+										<li><i> </i></li>
+										<li><i> </i></li>
+										<li><i> </i></li>
+										<li><i> </i></li>
+										<li><i> </i></li>
 									</ul>
+									<!-- <div class="review">
+										<a href="#"> 3 reviews </a>/
+										<a href="#">  Write a review</a>
+									</div> -->
+									<div class="clearfix"> </div>
 								</div>
 
-								<a href="#" class="cart ">More details</a>
+								<label  class="add-to"><?php echo $row['cost'] ?><sup>đ</sup></label>
+
+								<div class="available">
+									<h6>Available Options :</h6>
+									<ul>
+
+										<li>Size:<select>
+											<option>large</option>
+											<option>Medium</option>
+											<option>small</option>
+										</select></li>
+										<li>color:
+											<select>
+												<option>white</option>
+												<option>black</option>
+												<option>blue</option>
+
+											</select></li>
+										</ul>
+									</div>
+									<div>
+										<a href="#" class="cart " style="display:inline;" id="addgiohang">Thêm vào giỏ hàng</a>
+										<a <?php echo "href=checkout.php?id=".$row['id'] ?> style="background-color: green;display: inline;" class="cart ">Mua hàng</a>
+									</div>
+								</div>
 
 							</div>
-						</div>
-						<div class="clearfix"> </div>
-						<div class="product-top">
 
 							<div class="clearfix"> </div>
+							<div class="product-top">
+
+								<div class="clearfix"> </div>
+							</div>
 						</div>
-					</div>
+						<?php
+					}
+					?>
 				</div>
 				<!-- end content -->
 
 				<!--footer-->
 				<?php include('footer.php') ?>
 				<!--end footer-->
+				<script>
+					$(document).ready(function(){
+						$('#addgiohang').click(function() {
+							$('#sumGH').text($('#sumGH').text()*1+1);
+						});
 
+					});
+				</script>
 			</div>
 		</div>
 	</body>

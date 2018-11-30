@@ -10,11 +10,11 @@
 				<li><a href="product.html">+ UNG NHO TIÊN</a></li>
 			</ul>
 			<ul class="run-grid">
-				<li><a href="product.html">16CNTT3</a></li>
-				<li><a href="product.html">16CNTT3</a></li>
-				<li><a href="product.html">16CNTT3</a></li>
-				<li><a href="product.html">16CNTT3</a></li>
-				<li><a href="product.html">16CNTT3</a></li>
+				<li><a href="">16CNTT3</a></li>
+				<li><a href="">16CNTT3</a></li>
+				<li><a href="">16CNTT3</a></li>
+				<li><a href="">16CNTT3</a></li>
+				<li><a href="">16CNTT3</a></li>
 			</ul>
 			<div class="clearfix"> </div>
 		</div>
@@ -28,7 +28,12 @@
 				<li><a href="#">Giới thiệu</a></li>
 				<li><a href="#">Giá:Thấp đến Cao</a></li>
 				<li><a href="#">Giá:Cao đến Thấp</a></li>
-
+				<li><p style ="color:white;">
+						+Liên hệ: 0967 516 036
+						<br>
+						+Địa chỉ: Trường ĐHSP Đà Nẵng
+					</p>
+				</li>
 			</ul>
 			
 			<div class="clearfix"> </div>
