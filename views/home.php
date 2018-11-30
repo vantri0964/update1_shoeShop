@@ -117,11 +117,11 @@
 								?>
 								<div class="col-md-6 grid-product-in">	
 									<div class=" product-grid">	
-										<a <?php echo "href=detail.php?id=".$row['id'] ?> ><img class="img-responsive " <?php echo "src=../images/".$row['img']?>  alt=""></a>		
+										<a <?php echo "href=../views/detail.php?id=".$row['id'] ?> ><img class="img-responsive " <?php echo "src=../images/".$row['img']?>  alt=""></a>		
 										<div class="shoe-in">
-											<h6><a <?php echo "href=detail.php?id=".$row['id'] ?> ><?php echo $row['name'] ?> </a></h6>
+											<h6><a <?php echo "href=../views/detail.php?id=".$row['id'] ?> ><?php echo $row['name'] ?> </a></h6>
 											<label><?php echo $row['cost'] ?><sup>đ</sup></label>
-											<a <?php echo "href=detail.php?id=".$row['id'] ?>  class="store btn btn-danger"><span class="glyphicon glyphicon-tasks"></span> MORE DETAILS</a>
+											<a <?php echo "href=../views/detail.php?id=".$row['id'] ?>  class="store btn btn-danger"><span class="glyphicon glyphicon-tasks"></span> MORE DETAILS</a>
 										</div>
 
 										<b class="plus-on">+</b>
