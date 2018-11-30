@@ -3,30 +3,59 @@
 	<?php include('header.php'); ?>
 <!-- end header -->
 
+<?php
+	header('Location:home.php');
+	if(isset($_SESSION['name'])){
+		header('location:home.php');
+	}
+	include_once('../controller/c_user.php');
+
+	$userNameErr = null;
+	$passErr = null;
+
+	if(($_SERVER['REQUEST_METHOD'] == 'POST')){
+			//get text
+		$userName = $_POST['username'];
+		$pass = $_POST['password'];
+
+		$c_login = new C_User();
+		$errArr = $c_login->loginUser($userName, $pass);
+
+		if($errArr == null){
+			header('location:home.php');
+		}else{
+			$userNameErr = $errArr['userNameErr'];
+			$passErr = $errArr['passErr'];
+		}
+	}
+ ?>
 			<!--start content -->
 			<div class="container">
 				<div class="account">
 					<h2>Account</h2>
 					<div class="account-pass">
 						<div class="col-md-7 account-top">
-							<form action="../controller/c_login.php" method="POST">
+							<form action="" method="POST">
 								<div> 	
 									<span>Tài khoản: (*) </span>
 									<input type="text" name="username" placeholder="Nhập tài khoản" required/> 
+									<?php if($userNameErr){?>
+										<span class='text-danger'><?=$userNameErr?></span> 
 									<?php 
-									if(isset($userNameErr))
-										echo "<span class='text-danger'>".$userNameErr."</span>"; 
-									?>
+										}
+									 ?>
 								</div>
 								<div> 
 									<span>Mật khẩu: (*)</span>
 									<input type="password" name="password" placeholder="Nhập mật khẩu" required/>
+									<?php if($passErr){ ?>
+										<span class='text-danger'><?=$passErr?></span> 
 									<?php 
-									if(isset($passErr)) 
-										echo "<span class='text-danger'>".$passErr."</span>"; 
-									?>
+										}
+									 ?>
 								</div>				
-								<input type="submit" value="Đăng Nhập"> 
+								<input type="submit" value="Đăng Nhập">
+								<input type="reset" value="Reset"> 
 							</form>
 						</div>
 						<div class="col-md-5 left-account ">

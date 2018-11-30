@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+ ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -73,11 +77,11 @@
 								<?php 
 							}else{
 								?>
-									<li><a href='singin.php'>Đăng nhập</a></li>
+									<li><a href='login.php'>Đăng nhập</a></li>
 									<li><a href='register.php'>Đăng ký</a></li>
 								<?php
 							}
-						?>					
+						?>			
 					</ul>
 					<!-- end account -->
 
