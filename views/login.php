@@ -1,6 +1,6 @@
 
 <!--start header -->
-	<?php include('header.php'); ?>
+	<?php include_once('header.php'); ?>
 <!-- end header -->
 
 <?php
