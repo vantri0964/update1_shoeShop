@@ -10,13 +10,13 @@ class M_LoadAndPaging extends Database
 	}
 	public function queryLoadShoePaging($start,$limit){
 		$conn = parent::getConn();
-		$stm = null;
+		$stmt = null;
 		try {
     	$sql="select * from productshoe LIMIT $start,$limit ";
-    	$stm=$conn->prepare($sql);
-    	$stm->setFetchMode(PDO::FETCH_ASSOC);
-    	$stm->execute();
-    	$result =$stm->fetchAll();
+    	$stmt=$conn->prepare($sql);
+    	$stmt->setFetchMode(PDO::FETCH_ASSOC);
+    	$stmt->execute();
+    	$result =$stmt->fetchAll();
     	return $result;
 		}catch(PDOException $e){
 	    	echo "Query failed of queryLoadShoePaging in m_loadAndPaging: " . $e->getMessage();

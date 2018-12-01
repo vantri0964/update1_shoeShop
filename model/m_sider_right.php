@@ -10,13 +10,13 @@ class M_slider_right extends Database
 	}
 	public function querySliderRight($start,$limit){
 		$conn = parent::getConn();
-		$stm = null;
+		$stmt = null;
 		try {
     	$sql="select * from productshoe LIMIT $start,$limit ";
-    	$stm=$conn->prepare($sql);
-    	$stm->setFetchMode(PDO::FETCH_ASSOC);
-    	$stm->execute();
-    	$result =$stm->fetchAll();
+    	$stmt=$conn->prepare($sql);
+    	$stmt->setFetchMode(PDO::FETCH_ASSOC);
+    	$stmt->execute();
+    	$result =$stmt->fetchAll();
     	return $result;
 		}catch(PDOException $e){
 	    	echo "Query failed of querySliderRight in m_querySliderRight: " . $e->getMessage();
