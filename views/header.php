@@ -129,7 +129,7 @@ session_start();
 							if(isset($_SESSION['name']))
 							{
 								?>
-								<li><a href='#'><?= $_SESSION['name']?></li>
+								<li><a href='#'><?=$_SESSION['name']?></li>
 									<li><a href='logout.php'>Đăng xuất</a></li>
 									<?php 
 								}else{
@@ -138,7 +138,7 @@ session_start();
 									<li><a href='register.php'>Đăng ký</a></li>
 									<?php
 								}
-								?>			
+								?>	
 							</ul>
 							<!-- end account -->
 

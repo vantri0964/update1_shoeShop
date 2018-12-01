@@ -1,5 +1,5 @@
 <!-- start header -->
-	<?php include('header.php');?>
+	<?php require_once('header.php');?>
 <!-- end header -->
 
 <!-- start content checkout -->
@@ -59,5 +59,5 @@
 			<!-- end content -->
 
 			<!-- start footer -->
-				<?php include('footer.php');?>
+				<?php require_once('footer.php');?>
 			<!-- end footer -->

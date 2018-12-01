@@ -1,14 +1,14 @@
 
 <!--start header -->
-	<?php include_once('header.php'); ?>
+	<?php require_once('header.php'); ?>
 <!-- end header -->
 
 <?php
 
-	if(isset($_SESSION['namedn'])){
+	if(isset($_SESSION['name'])){
 		header('location:home.php');
 	}
-	include_once('../controller/c_user.php');
+	require_once('../controller/c_user.php');
 
 	$userNameErr = null;
 	$passErr = null;
@@ -74,6 +74,6 @@
 			<!--end content-->
 
 <!-- start footer-->
-	<?php include('footer.php'); ?>
+	<?php require_once('footer.php'); ?>
 <!--end footer-->
 

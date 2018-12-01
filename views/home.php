@@ -1,8 +1,8 @@
 <!--header-->
-<?php include('header.php'); ?>
+<?php require_once('header.php'); ?>
 <!--end header-->
 <?php
-include('../controller/c_loadAndPaging.php');
+require_once('../controller/c_loadAndPaging.php');
 
 $loadAndPaging=new controller_class_load();
 $result=$loadAndPaging->product();
@@ -194,5 +194,5 @@ $resultSlider =$sliderright->slider();
 
 </div>	
 <!--footer-->
-<?php include('footer.php') ?>
+<?php require_once('footer.php') ?>
 <!-- end footer -->

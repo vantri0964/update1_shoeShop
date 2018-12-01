@@ -5,35 +5,46 @@
 		<!-- start content -->
 			<div class="container">
 				<div class="register">
-					<h2>REGISTER</h2>		
-					<div class=" register-top">
+					<h2>Đăng ký</h2>		
+					<div class="register-top">
 						<form>
 							<div> 	
-								<span>Full Name</span>
-								<input type="text" required=""> 
+								<span>Tài khoản: (*)</span>
+								<input type="text" name="username" required="" maxlength="50"> 
 							</div>
 							<div> 	
-								<span>User Name</span>
-								<input type="text" required=""> 
+								<span>Họ tên: (*)</span>
+								<input type="text" name="name" required="" maxlength="50"> 
+							</div>
+							<div> 	
+								<span>Email: (*)</span>
+								<input type="email" name="email" required="" maxlength="100"> 
+							</div>
+							<div> 	
+								<span>Địa chỉ: </span>
+								<textarea name="address" maxlength="200"></textarea>
+							</div>
+							<div> 	
+								<span>Giới tính: </span>
+								<span>
+									<label for="Male">Nam
+									<input type="radio" name="sex" id="Male" class="" value="Nam" autocomplete="off"></label>
+									<label for="Female">Nữ
+									<input type="radio"  name="sex" id="Female" class="" value="Nữ"  autocomplete="off"></label></span>
+							</div>
+							<div> 	
+								<span>Ngày sinh: </span>
+								<input type="date" name="birthday" id="birthday" min="1920-01-01" max="2018-01-01">
 							</div>
 							<div> 
-								<span >Password</span>
-								<input type="password" required="">
+								<span >Mật khẩu: (*)</span>
+								<input type="password" required="" maxlength="100">
 							</div>
 							<div> 
-								<span >Confirt Password</span>
-								<input type="password" required="">
+								<span >Nhập lại mật khẩu: (*)</span>
+								<input type="password" required="" maxlength="100">
 							</div>
-							<div> 	
-								<span>Adress</span>
-								<input type="text" required=""> 
-							</div>	
-							<div> 	
-								<span>Email</span>
-								<input type="text" required=""> 
-							</div>
-
-							<input type="submit" value="Submit"> 
+							<input type="submit" value="Đăng ký"> 
 						</form>
 					</div>		
 				</div>
