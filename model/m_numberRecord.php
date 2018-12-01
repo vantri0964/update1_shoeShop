@@ -10,13 +10,13 @@ class M_NumberRecord extends Database
 	}
 	public function number_record(){
 		$conn = parent::getConn();
-		$stm = null;
+		$stmt = null;
 		try {
     	$sqlCount="select count(id) as total from productshoe";
-        $stmCount=$conn->prepare($sqlCount);
-        $stmCount->setFetchMode(PDO::FETCH_ASSOC);
-        $stmCount->execute();
-        $number_record =$stmCount->fetchColumn();
+        $stmt=$conn->prepare($sqlCount);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->execute();
+        $number_record =$stmt->fetchColumn();
         return $number_record;
 		}catch(PDOException $e){
 	    	echo "Query failed of number_record in m_numberRecord: " . $e->getMessage();

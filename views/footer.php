@@ -73,60 +73,6 @@
 	</div>
 	<!-- end div.row -->
 
-	<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- Latest compiled JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="../js/jquery.min.js"></script>
-
-
-		<script type="application/x-javascript"> 
-			addEventListener("load", function() { 
-				setTimeout(hideURLbar, 0); 
-			}, false); 
-			function hideURLbar(){
-			 	window.scrollTo(0,1); 
-			} 
-		</script>
-
-	<!-- search-scripts -->
-		<script src="../js/classie.js"></script>
-		<script src="../js/uisearch.js"></script>
-		<script>
-			new UISearch( document.getElementById( 'sb-search' ) );
-		</script>
-	<!-- end search-scripts -->
-	<!-- menu nav-script -->
-		<script type="text/javascript" src="../js/nav.js"></script>
-	<!-- end menu nav-script -->
-
-	<!-- detail script -->
-	<script src="../js/jquery.etalage.min.js"></script>
-	<script>
-		jQuery(document).ready(function($){
-
-			$('#etalage').etalage({
-				thumb_image_width: 300,
-				thumb_image_height: 400,
-				source_image_width: 900,
-				source_image_height: 1200,
-				show_hint: true,
-				click_callback: function(image_anchor, instance_id){
-					alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-				}
-			});
-
-		});
-	</script>
-	<script>
-		$(document).ready(function(){
-			$('#addgiohang').click(function() {
-				$('#sumGH').text($('#sumGH').text()*1+1);
-			});
-
-		});
-	</script>
-	<!-- end detail script -->
+	
 </body>
 </html>

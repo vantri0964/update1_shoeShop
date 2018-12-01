@@ -3,8 +3,10 @@
 <!--end header-->
 <?php
 include('../controller/c_loadAndPaging.php');
+
 $loadAndPaging=new controller_class_load();
 $result=$loadAndPaging->product();
+
 ?>
 
 
@@ -80,6 +82,7 @@ $result=$loadAndPaging->product();
 			<div class="col-md-8" id="content-8">
 				<!-- vòng for hiển thị data -->
 				<?php
+
 				foreach ($result as $row) {
 
 					?>
@@ -138,6 +141,9 @@ $result=$loadAndPaging->product();
 							<div class="flexslider">
 								<ul class="slides">
 									<?php
+									include('../controller/c_sliderRight.php');
+$sliderright=new controller_class_slider();
+$resultSlider =$sliderright->slider();
 									foreach ($resultSlider as $rowSlider) {
 										
 										?>

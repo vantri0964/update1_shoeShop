@@ -10,14 +10,14 @@ class M_Detail extends Database
 	}
 	public function  Detail_Page($id){
 		$conn = parent::getConn();
-		$stm = null;
+		$stmt = null;
 		try { 	
         $sql="select * from productshoe where id=?";
-        $stm=$conn->prepare($sql);
-        $stm->bindParam(1,$id);
-        $stm->setFetchMode(PDO::FETCH_ASSOC);
-        $stm->execute();
-        $result =$stm->fetchAll();
+        $stmt=$conn->prepare($sql);
+        $stmt->bindParam(1,$id);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->execute();
+        $result =$stmt->fetchAll();
         return $result;
 		}catch(PDOException $e){
 	    	echo "Query failed of detail in m_detail: " . $e->getMessage();
